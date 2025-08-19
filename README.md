@@ -1,11 +1,11 @@
 # React + TypeScript + Vite + Vitest
 
-A starter template for building React apps in TypeScript with Vite. Includes Vitest for unit testing and
-a hefty .gitignore file.
+A starter template for building React 19+ apps in TypeScript with Vite. Includes Vitest for unit testing and
+a hefty .gitignore file. React compiler enabled.
 
 # Requirements
 
-Node 20 or greater.
+Node 22 or greater.
 
 ## Usage
 
