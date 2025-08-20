@@ -1,6 +1,6 @@
 # React + TypeScript + Vite + Vitest
 
-A starter template for building React 19+ apps in TypeScript with Vite. Includes Vitest for unit testing and
+A starter template for building React 19+ apps in TypeScript with Vite and TailwindCSS 4. Includes Vitest for unit testing and
 a hefty .gitignore file. React compiler enabled.
 
 # Requirements
@@ -61,7 +61,6 @@ your-app-name
 └── src
     |-- assets
         └── react.svg
-    ├── App.css
     ├── App.tsx
     ├── index.css
     ├── main.tsx
