@@ -12,11 +12,8 @@ Node 22 or greater.
 ```
 mkdir your-app-name
 cd your-app-name
-npx degit criesbeck/react-ts-vitest
-npm install
+npx degit criesbeck/react-ts-vitest && npm install
 ```
-If the third step hangs after printing ``> cloned criesbeck/react-vitest#HEAD``, 
-just control-C to exit that step and then run ``npm install``.
 
 ## Test
 
