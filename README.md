@@ -12,8 +12,11 @@ Node 22 or greater.
 ```
 mkdir your-app-name
 cd your-app-name
-npx degit criesbeck/react-ts-vitest && npm install
+npx degit criesbeck/react-ts-vitest
+npm install
 ```
+Note: degit sometimes fails to say it is done after announcing it has cloned the repo.
+If that happens, type control-C and then do `npm install`.
 
 ## Test
 
