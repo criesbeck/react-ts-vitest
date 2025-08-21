@@ -2,32 +2,42 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="text-center">
+      <header className="bg-[#282c34] min-h-screen flex flex-col items-center justify-center text-[calc(10px_+_2vmin)] text-white">
+        <img src={reactLogo} className="h-[20vmin] pointer-events-none animate-logo-spin" alt="logo" />
+        <img src={viteLogo} className="h-[20vmin] pointer-events-none animate-logo-spin" alt="logo" />
+        <p className="m-4">Hello React + Vite!</p>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          <button className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded " onClick={() => setCount(count => count + 1)}>
+            count is: {count}
+          </button>
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+        <p className="italic text-gray-400">
+          Edit <code>App.tsx</code> to test hot module replacement (HMR).
+        </p>
+        <p className='mt-4'>
+          <a className="bg-cyan-300 hover:bg-cyan-400 text-black font-bold py-2 px-4 rounded"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          {' | '}
+          <a className='bg-cyan-300 hover:bg-cyan-400 text-black font-bold py-2 px-4 rounded'
+            href="https://vitejs.dev/guide/features.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vite Docs
+          </a>
+        </p>
+      </header>
+    </div>
   )
 }
 
