@@ -23,7 +23,7 @@ If that happens, type control-C and then do `npm install`.
 Verify that the initial app works. Run
 
 ```
-npm start
+npm run dev
 ```
 
 Open the URL displayed. Click on the counter to increment it.
