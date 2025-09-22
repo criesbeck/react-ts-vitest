@@ -42,7 +42,6 @@ Two tests should run and pass.
 
 | Script           | Description                                         |
 | -----------------| --------------------------------------------------- |
-| npm start        | Runs the app in the development mode.               |
 | npm run dev      | Runs the app in the development mode.               |
 | npm run build    | Builds the app for production to the `dist` folder. |
 | npm run serve    | Serves the production build from the `dist` folder. |
