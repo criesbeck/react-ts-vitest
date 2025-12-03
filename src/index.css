@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
-@theme {
-  --animate-logo-spin: logo-spin infinite 20s linear;
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
 
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+/* Ensure the body takes full height */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Leaflet map styles - ensure map tiles render */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #ddd;
+}
+
+.leaflet-tile-container {
+  opacity: 1 !important;
+}
+
+.leaflet-tile {
+  opacity: 1 !important;
 }

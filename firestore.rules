@@ -1,0 +1,37 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Restrooms collection - anyone can read, anyone can add
+    match /restrooms/{restroomId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll([
+        'buildingName',
+        'floor', 
+        'location',
+        'isWheelchairAccessible',
+        'isGenderNeutral',
+        'requiresWildcard',
+        'status',
+        'lastUpdated'
+      ]);
+      allow update: if true; // Allow updates to status
+      allow delete: if false; // Prevent deletion (admin only in future)
+    }
+    
+    // Reviews collection - anyone can read and write
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll([
+        'restroomId',
+        'userId',
+        'userName',
+        'rating',
+        'createdAt'
+      ]);
+      allow update: if true; // Allow flagging
+      allow delete: if false; // Prevent deletion (moderation in future)
+    }
+  }
+}

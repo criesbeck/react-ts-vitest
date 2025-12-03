@@ -1,0 +1,16 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+
+    "restrooms": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+
+    "reviews": {
+      ".read": true,
+      ".write": "auth != null"
+    }
+  }
+}
